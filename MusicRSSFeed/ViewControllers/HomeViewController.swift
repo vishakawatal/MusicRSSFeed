@@ -66,8 +66,11 @@ extension HomeViewController: UICollectionViewDataSource {
 }
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       print("Do something when selected")
+        if let detailViewController = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
+            detailViewController.selectedCellViewModel = viewModel.dataSource[indexPath.row]
+            self.navigationController?.pushViewController(detailViewController, animated: true)
         }
+    }
 }
 
 extension HomeViewController: FeedTypeListViewControllerDelegate {
