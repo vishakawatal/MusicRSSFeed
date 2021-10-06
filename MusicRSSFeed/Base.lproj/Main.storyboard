@@ -26,7 +26,7 @@
                                     <inset key="sectionInset" minX="4" minY="2" maxX="4" maxY="2"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="mjP-CT-Z6d" customClass="CollectionViewCell" customModule="iTunesRSSFeedExample" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="mjP-CT-Z6d" customClass="CollectionViewCell" customModule="MusicRSSFeed" customModuleProvider="target">
                                         <rect key="frame" x="4" y="2" width="185" height="225"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -95,7 +95,16 @@
                             <constraint firstAttribute="bottom" secondItem="jM8-7e-zQX" secondAttribute="bottom" id="q60-3S-6i6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="7Os-n5-spb"/>
+                    <navigationItem key="navigationItem" id="TwF-Is-Xgr">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="list.bullet.below.rectangle" catalog="system" style="plain" id="ZCy-Ie-31U">
+                            <color key="tintColor" systemColor="systemPinkColor"/>
+                            <connections>
+                                <segue destination="jTv-JL-iAj" kind="popoverPresentation" identifier="ShowFeedTypeList" popoverAnchorBarButtonItem="ZCy-Ie-31U" id="Eih-Nt-GV9">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="jM8-7e-zQX" id="gaj-VV-eIx"/>
                         <outlet property="loadingViewIndicator" destination="BWe-uk-IFl" id="HcL-uT-RNB"/>
@@ -103,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="91.741071428571431"/>
+            <point key="canvasLocation" x="1048" y="57"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="M5x-p2-tnG">
@@ -123,8 +132,58 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="91.741071428571431"/>
         </scene>
+        <!--Feed Type List View Controller-->
+        <scene sceneID="MdP-Tg-Tdm">
+            <objects>
+                <viewController storyboardIdentifier="FeedTypeListViewController" id="jTv-JL-iAj" customClass="FeedTypeListViewController" customModule="MusicRSSFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vbd-7n-B9h">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="220"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dd5-Ra-vjl">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedListViewCell" textLabel="eUy-yK-oWl" rowHeight="50" style="IBUITableViewCellStyleDefault" id="stU-sS-bvt">
+                                        <rect key="frame" x="0.0" y="28" width="300" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="stU-sS-bvt" id="lQk-R4-ex8">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eUy-yK-oWl">
+                                                    <rect key="frame" x="16" y="0.0" width="268" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="jTv-JL-iAj" id="wsF-Ib-20K"/>
+                                    <outlet property="delegate" destination="jTv-JL-iAj" id="NDd-LW-GP9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WVz-F5-Mzb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <size key="freeformSize" width="300" height="220"/>
+                    <connections>
+                        <outlet property="view" destination="vbd-7n-B9h" id="rUq-vb-0zN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CfG-Ax-Bey" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1928" y="-395"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="list.bullet.below.rectangle" catalog="system" width="128" height="112"/>
         <image name="rssFeed" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
