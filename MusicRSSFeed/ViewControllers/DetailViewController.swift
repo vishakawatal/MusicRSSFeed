@@ -8,7 +8,7 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var albumnImageView: UIImageView!
     @IBOutlet weak var albumnName: UILabel!
@@ -33,7 +33,7 @@ class DetailViewController: UIViewController {
             let url = URL(string: "music://\(appleMusicUrlToLaunch)")
             UIApplication.shared.open(url!) { (result) in
                 if result {
-                   // The URL was delivered successfully!
+                    // The URL was delivered successfully!
                     print("Successfully Opened")
                 }
             }

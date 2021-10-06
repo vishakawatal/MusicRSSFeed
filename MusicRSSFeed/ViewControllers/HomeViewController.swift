@@ -41,14 +41,14 @@ private extension HomeViewController {
             self.loadImages()
         }
     }
-        func loadImages() {
-            viewModel.loadImagesFromAPIAndUpdateCellViewModels { index in
-                let indexPathToReload = IndexPath.init(item: index, section: 0)
-                self.collectionView.reloadItems(at: [indexPathToReload])
-            }
+    func loadImages() {
+        viewModel.loadImagesFromAPIAndUpdateCellViewModels { index in
+            let indexPathToReload = IndexPath.init(item: index, section: 0)
+            self.collectionView.reloadItems(at: [indexPathToReload])
         }
+    }
 }
-    
+
 
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
