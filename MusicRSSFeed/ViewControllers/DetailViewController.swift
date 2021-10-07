@@ -25,20 +25,6 @@ class DetailViewController: UIViewController {
         self.albumnImageView.layer.cornerRadius = (self.albumnImageView.frame.size.width/2)
         loadDisplayContent()
     }
-    
-    
-    @IBAction func listenAppleMusicButtonTapped(_ sender: Any) {
-        if let appleMusicUrl = selectedCellViewModel?.appleMusicUrl, appleMusicUrl.hasPrefix("https://") {
-            let appleMusicUrlToLaunch = appleMusicUrl.dropFirst("https://".count)
-            let url = URL(string: "music://\(appleMusicUrlToLaunch)")
-            UIApplication.shared.open(url!) { (result) in
-                if result {
-                    // The URL was delivered successfully!
-                    print("Successfully Opened")
-                }
-            }
-        }
-    }
 }
 
 private extension DetailViewController {

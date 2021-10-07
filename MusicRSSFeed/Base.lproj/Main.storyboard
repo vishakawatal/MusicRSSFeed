@@ -193,7 +193,7 @@
                                 <rect key="frame" x="0.0" y="26" width="414" height="836"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XI3-cP-TkB">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="445.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="419.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Default_Image" translatesAutoresizingMaskIntoConstraints="NO" id="ksi-sA-y2Z">
                                                 <rect key="frame" x="79" y="0.0" width="256" height="256"/>
@@ -204,7 +204,7 @@
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SJA-53-yMV">
-                                                <rect key="frame" x="0.0" y="256" width="414" height="189.5"/>
+                                                <rect key="frame" x="0.0" y="256" width="414" height="163.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pD-56-W9E" userLabel="albumnName">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
@@ -230,14 +230,6 @@
                                                         <color key="textColor" systemColor="systemGrayColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGg-FL-3mS">
-                                                        <rect key="frame" x="0.0" y="168.5" width="414" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="tintColor" systemColor="systemPinkColor"/>
-                                                        <state key="normal" title=" Listen on Apple Music" image="music.house.fill" catalog="system">
-                                                            <color key="titleColor" systemColor="systemPinkColor"/>
-                                                        </state>
-                                                    </button>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -267,7 +259,6 @@
                     <connections>
                         <outlet property="albumnImageView" destination="ksi-sA-y2Z" id="c3M-ik-u4K"/>
                         <outlet property="albumnName" destination="5pD-56-W9E" id="D4k-LN-boL"/>
-                        <outlet property="appleMusicButton" destination="MGg-FL-3mS" id="pbU-p6-F2p"/>
                         <outlet property="artistName" destination="bzV-tZ-Wnd" id="2Xf-gh-Nw8"/>
                         <outlet property="copyRight" destination="dkh-0c-sxg" id="fqh-qF-ZxX"/>
                         <outlet property="releaseDate" destination="423-MR-Jje" id="A9C-vR-3RO"/>
@@ -282,7 +273,6 @@
     <resources>
         <image name="Default_Image" width="493" height="391"/>
         <image name="list.bullet.below.rectangle" catalog="system" width="128" height="112"/>
-        <image name="music.house.fill" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
