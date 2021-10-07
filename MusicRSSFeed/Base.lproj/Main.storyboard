@@ -33,10 +33,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="185" height="225"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rssFeed" translatesAutoresizingMaskIntoConstraints="NO" id="FOY-eD-l6r" userLabel="AlbumImageView">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Default_Image" translatesAutoresizingMaskIntoConstraints="NO" id="FOY-eD-l6r" userLabel="AlbumImageView">
                                                     <rect key="frame" x="0.0" y="0.0" width="185" height="158"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Changes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WfO-cb-iPi" userLabel="NameLabel">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WfO-cb-iPi" userLabel="NameLabel">
                                                     <rect key="frame" x="0.0" y="158" width="185" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="FrN-QZ-2Yp"/>
@@ -45,7 +45,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Justin Biber" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000001192092896" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PM8-Xe-hyo" userLabel="Subtitle">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000001192092896" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PM8-Xe-hyo" userLabel="Subtitle">
                                                     <rect key="frame" x="0.0" y="188" width="185" height="37"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="37" id="wBQ-Dj-Nkn"/>
@@ -184,7 +184,7 @@
         <!--Detail View Controller-->
         <scene sceneID="pvU-Tp-jSQ">
             <objects>
-                <viewController storyboardIdentifier="DetailViewController" id="uDL-LM-tcC" customClass="DetailViewController" customModule="iTunesRSSFeedExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="uDL-LM-tcC" customClass="DetailViewController" customModule="MusicRSSFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4YV-Ft-KNQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -195,7 +195,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XI3-cP-TkB">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="445.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample" translatesAutoresizingMaskIntoConstraints="NO" id="ksi-sA-y2Z">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Default_Image" translatesAutoresizingMaskIntoConstraints="NO" id="ksi-sA-y2Z">
                                                 <rect key="frame" x="79" y="0.0" width="256" height="256"/>
                                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                                 <constraints>
@@ -206,13 +206,13 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SJA-53-yMV">
                                                 <rect key="frame" x="0.0" y="256" width="414" height="189.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Changes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pD-56-W9E" userLabel="albumnName">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pD-56-W9E" userLabel="albumnName">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="46"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Just Biber" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzV-tZ-Wnd" userLabel="artistName">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzV-tZ-Wnd" userLabel="artistName">
                                                         <rect key="frame" x="0.0" y="60" width="414" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <nil key="textColor"/>
@@ -280,10 +280,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Default_Image" width="493" height="391"/>
         <image name="list.bullet.below.rectangle" catalog="system" width="128" height="112"/>
         <image name="music.house.fill" catalog="system" width="128" height="106"/>
-        <image name="rssFeed" width="512" height="512"/>
-        <image name="sample" width="632" height="622"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
